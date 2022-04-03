@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #365f7a, #1c265e);
+}
+
+.photo {
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: calc(70% - 79px);
+}
+
+.container {
+    max-width: 680px;
+    max-height: 770px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(26, 23, 66, 0.904);
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+    margin-right: 320px;
+}
+
+#show:checked~.container {
+    display: block;
+}
+
+.container .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container .close-btn:hover {
+    color: #3498db;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    color: #414696;
+}
+
+
+/*.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: -5px;
+    height: 3px;
+    width: 100px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #221a69);
+}*/
+
+.address p {
+    font-size: 16px;
+    font-weight: 450;
+    position: relative;
+    color: #252852;
+    padding-bottom: -50px;
+    padding-left: 450px;
+    margin-top: -50px;
+    /* padding-top: -60px;*/
+}
+
+.side {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    color: #252852;
+    padding-top: -40px;
+    margin-right: 400px;
+    margin-bottom: 40px;
+    border: 1.8px solid #1927a7;
+    border-radius: 10px;
+}
+
+.content form .user-details {
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    margin-top: 30px;
+}
+
+form .user-details .input-box {
+    margin-bottom: 20px;
+    width: calc(50% - 5px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+form .box span.details {
+    display: inline;
+    font-weight: 500;
+    margin-bottom: 50px;
+    margin-right: 220px;
+}
+
+form .hos-num .box input {
+    height: 35px;
+    width: 15%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-right: -3px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin-left: -150px;
+    margin-top: -70px;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #261652;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+.input-box textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgb(85, 82, 134);
+    margin-top: 5px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .button {
+    height: 45px;
+    margin: 15px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #141a4d);
+}
+
+form .button input:hover {
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #291557);
+}
+
+@media(max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar {
+        width: 8px;
+    }
+}
+
+@media(max-width: 459px) {
+    .container .content {
+        flex-direction: column;
+    }
+}
